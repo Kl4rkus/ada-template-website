@@ -131,6 +131,7 @@ Now let’s look at these graphs precisely and more closely to the meaning of th
 Challenging the political system 
 When the covid arrives, among the philosophies that have a strong increase in their interest are Socialism and Populism. This is interesting because they are both political philosophies that  are driven by social inequalities and that criticize the capitalist system. Close to these currents are Communism and Marxism, that have a strong increase in the predicted intercept. Also, we can see that although Fascism has a slight slow down in its trend, it remains a highly popular page and after the beginning of covid has an increase in the predicted intercept. Finally, pages Anarchy and Anarchism also have higher baselines after the beginning of Covid. After the Covid, the tendency is reversed for Socialism but the others keep their positive trends. This is interesting because during the Covid, inequalities were highlighted more than ever, especially during lockdowns. Depending on social class, differences in quality of life, education and financial security have been exacerbated more than ever. This could explain the renewed interest, particularly in populism, which had previously been on the wane.  What's more, the measures taken by governments have often been criticized and judged to be very harsh, which could also explain the stronger interest in philosophies linked to the power of the state and the questioning of its system. 
 Notice that we can observe a slight drop of views at the end of the graph but that is common in a lot of pages at this moment, probably due to the full return in normalcy and an interest in wikipedia in general less present. 
+<img src="images/Poverty.png">
 
  ## GRAPH Political  ##
 
@@ -208,8 +209,6 @@ This heatmap represents the dissimilarity in pageview patterns between different
 In order to visualize this more clearly, we reduce our data’s dimension so that we can plot all data points in two dimensions.
 
 
-<img src="/images/T-SNE_Scatter_Plot_with_Country_Codes.png">
-![](path/to/your/image.jpg)
 <img src="images/T-SNE_Scatter_Plot_with_Country_Codes.png">
 
 
