@@ -140,7 +140,7 @@ t-SNE Scatter Plot
 <li>Korean and Japanese are close in this plot, which aligns with the post-Covid dendrogram, suggesting a similarity in the shift of attention in philosophy-related content.</li>
 </ul>
 
-And finally, we performed a clustering analysis of our fraction of views to effectively determine if clusters exist or not. For this analysis we choose two methods. The first one uses the fraction computed before, during and after covid. The second one, we tried to reduce the noise in our fraction. We subtracted the mean of fraction of views before covid to make differences appear more clearly. We found that clusters built with a reduction of noise matches the cluster determined with correlation in dendrograms. However, this clustering using fractions of views is less clear than the one using correlation. We observe a pretty similar distribution on fraction of views on each article in each language except for Korean and Japanese. 
+And finally, we performed a clustering analysis of our fraction of views to effectively determine if clusters exist or not. For this analysis we choose two methods. The first one uses the fraction computed before, during and after covid. The second one, we tried to reduce the noise in our fraction. We subtracted the mean of fraction of views before covid to make differences appear more clearly. Each dot representing a cluster.
 
 <head>
     <style>
@@ -176,18 +176,30 @@ And finally, we performed a clustering analysis of our fraction of views to effe
         </tr>
         <tr>
             <td>Raw fraction of views</td>
-            <td><ul><li> Fr, It, Sr</li>
-            <li> Ja, Ko </li> <li>De, Sv, Da, Fi, Nl, No</li>
+            <td><ul><li> French, Italian, Serbian</li>
+            <li> Japanese, Korean </li> <li>German, Swedish, Danish, Finnish, Dutch, Norwegian</li>
             </ul></td>
-            <td>Row 1, Cell 3</td>
-            <td>Row 1, Cell 4</td>
+            <td><ul><li> French, Italian, Serbian,German, Swedish, Danish, Finnish, Dutch, Norwegian</li>
+            <li> Japanese, Korean </li>
+            </ul></td>
+            <td><ul><li> French, Italian, Serbian</li>
+            <li> Japanese, Korean </li> <li>German, Swedish, Danish, Finnish, Dutch, Norwegian</li>
+            </ul></td>
         </tr>
         <tr>
             <td>De-noisy fraction of views</td>
-            <td>Row 2, Cell 2</td>
-            <td>Row 2, Cell 3</td>
-            <td>Row 2, Cell 4</td>
+            <td><ul><li> French, Italian, Serbian</li>
+            <li> Japanese, Korean </li> <li>German, Swedish, Danish, Finnish, Dutch, Norwegian</li>
+            </ul></td>
+            <td><ul><li> French, Italian, Serbian,German, Swedish, Danish, Finnish, Dutch, Norwegian</li>
+            <li> Japanese, Korean </li>
+            </ul></td>
+            <td><ul><li> French, Italian, Serbian,German, Swedish, Danish, Finnish, Dutch, Norwegian</li>
+            <li> Japanese, Korean </li>
+            </ul></td>
         </tr>
     </table>
+
+We found that clusters built with a reduction of noise matches the cluster determined with correlation in dendrograms. However, this clustering using fractions of views is less clear than the one using correlation. We observe a pretty similar distribution on fraction of views on each article in each language except for Korean and Japanese. We can clearly say that after all this analysis when Covid came the consumption of Wikipedia philosopy pages has never been more similar accross languages.    
 
 In summary, the analysis suggests that there were distinct shifts in the consumption of philosophical content across different language editions of Wikipedia during the Covid pandemic. Cultural and linguistic similarities influenced these patterns before the pandemic, which shifted as the pandemic unfolded and persisted even after the peak of the crisis. These shifts may reflect broader changes in cultural and societal attitudes towards philosophical topics during times of global crisis.
