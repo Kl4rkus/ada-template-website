@@ -208,7 +208,7 @@ This heatmap represents the dissimilarity in pageview patterns between different
 In order to visualize this more clearly, we reduce our data’s dimension so that we can plot all data points in two dimensions.
 
 
-<img title="a title" alt="Alt text" src="/images/T-SNE_Scatter_Plot_with_Country_Codes.png">
+<img src="/images/T-SNE_Scatter_Plot_with_Country_Codes.png">
 
 
 
