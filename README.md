@@ -98,3 +98,100 @@ High positive correlations are seen among several philosophical clusters, indica
 
 
 Having looked at data in a somewhat qualitative manner, we will now try to dive into some more rigorous and causal approach for digging further into this question with the next part of our data story where we will adopt a more statistical rigorous approach.
+
+# Part 3: Looking at how languages dynamics across philosophical articles behave during Covid 19 period.
+
+Now, we want to observe how the dynamics of the consultation of the philosophy related pages evolved before, during and after Covid across different languages. In other words, we analyze how the consumption of wikipedia philosophy related pages is different across languages. The first thing that we can take a look at is the total views of philosophy pages in each language in log scale to reduce discrepancies between languages. We just want to take a look at the trend.
+
+PLOT OF TOTAL VIEWS
+
+In the analysis of the graph, a distinct trend emerges as languages collectively ascend during the Covid period. The upward movement suggests a shared trajectory, possibly indicating a global response to the challenges posed by the pandemic. Notably, Japan exhibits a delay in its upward shift, which could be attributed to its implementation of lockdown measures at a later date compared to other regions. This temporal discrepancy in response strategies is mirrored in the graph. Intriguingly, certain languages appear relatively unaffected, maintaining a consistent course, while others display persistent changes, underscoring the diverse impacts of the pandemic on linguistic patterns.There is a general trend of increased page views around the first vertical line, which could correspond with the onset of Covid where all countries show a peak in interest. The second peak corresponds to the onset of lockdowns, where the interest in philosophical content increases or maintains a high level. The decline in page views after the second peak may indicate a gradual return to normalcy or a saturation point in the public's search for philosophical content.
+Next, we decided to analyze correlation between languages in order to observe which languages move together and which languages move differently. Therefore we compute correlation matrices for each period.
+
+CORRELATION MATRIX
+DENDOGRAMS
+
+In order to make these results clearer, we plot these dendrograms to show how different language editions of philosophy-related Wikipedia pages clustered together before, during, and after the COVID-19 outbreak based on the patterns of pageviews.
+<ul>
+<li>Before COVID-19: There is a distinct cluster that groups the Scandinavian languages (Danish, Norwegian, Swedish), suggesting similar trends in philosophy pageviews. The Romance languages (Italian, French) and Germanic languages (Dutch, German) form separate clusters, with Japanese and Korean being outliers.</li>
+<li>During COVID-19: The cluster patterns shift, showing a Scandinavian group remaining intact, while Italian joins the German and Japanese cluster. French and Serbian form a distinct cluster, separating from Dutch.</li>
+<li>After COVID-19: The clustering shows further divergence, with Finnish and Korean forming a separate cluster, and Japanese becoming an outlier. The Scandinavian languages no longer form a tight cluster, indicating a possible shift in the shared attention of philosophical topics.</li>
+</ul>
+These changes in clustering patterns over time could reflect cultural shifts in attention to philosophical discourse during different phases of the pandemic.
+
+So, here we have a first clustering of our data based on trends of views in each language. We showed that certain languages can have a comparable consumption of philosophy on wikipedia. But, the lack of this analysis is that they can consult totally different pages. Therefore, in order to have a detailed analysis we will study this aspect. 
+
+For that, we computed a fraction of views of each article at all time steps in each language. And we tried to repeat the same analysis as before, try to observe if some languages have a similar consumption of philosophy pages on wikipedia.  
+
+Pairwise Euclidean Distances Heatmap
+
+This heatmap represents the dissimilarity in pageview patterns between different languages. Lower distances suggest more similar patterns.
+<ul>
+<li>The heatmap illustrates that Danish and Dutch, as well as German and French, have closer viewing patterns, indicated by the lighter colors.</li>
+<li>On the other hand, Japanese and Korean show larger distances from other languages, suggesting unique patterns of engagement with philosophical content.</li>
+</ul>
+
+In order to visualize this more clearly, we reduce our data’s dimension so that we can plot all data points in two dimensions.
+
+
+t-SNE Scatter Plot
+<ul>
+<li>Clusters in this scatter plot further illustrate the relationships between different language editions. Languages that are closer together in this plot have more similar pageview patterns.</li>
+<li>Korean and Japanese are close in this plot, which aligns with the post-Covid dendrogram, suggesting a similarity in the shift of attention in philosophy-related content.</li>
+</ul>
+
+And finally, we performed a clustering analysis of our fraction of views to effectively determine if clusters exist or not. For this analysis we choose two methods. The first one uses the fraction computed before, during and after covid. The second one, we tried to reduce the noise in our fraction. We subtracted the mean of fraction of views before covid to make differences appear more clearly. We found that clusters built with a reduction of noise matches the cluster determined with correlation in dendrograms. However, this clustering using fractions of views is less clear than the one using correlation. We observe a pretty similar distribution on fraction of views on each article in each language except for Korean and Japanese. 
+
+<head>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+            <th>Column 4</th>
+        </tr>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+            <td>Row 1, Cell 4</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+            <td>Row 2, Cell 4</td>
+        </tr>
+        <tr>
+            <td>Row 3, Cell 1</td>
+            <td>Row 3, Cell 2</td>
+            <td>Row 3, Cell 3</td>
+            <td>Row 3, Cell 4</td>
+        </tr>
+    </table>
+
+In summary, the analysis suggests that there were distinct shifts in the consumption of philosophical content across different language editions of Wikipedia during the Covid pandemic. Cultural and linguistic similarities influenced these patterns before the pandemic, which shifted as the pandemic unfolded and persisted even after the peak of the crisis. These shifts may reflect broader changes in cultural and societal attitudes towards philosophical topics during times of global crisis.
