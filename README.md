@@ -23,7 +23,7 @@ We use an API to retrieve the views from the philosophy pages. The name of the p
 In examining philosophical themes' attention shifts on Wikipedia during the COVID era, it became evident that the overall trends in philosophical topics mirrored the broader global trends. Consequently, delving into specific movements within philosophical ideas or clusters proved more compelling than focusing on philosophy's general trends as a whole.
 
 
-
+<div id="part1"></div>
 # Part 1: Looking at how people interests across philosophical topics behave during Covid 19 period.
 To analize different trends within the views of the different english wikipedia pages, we have formulated 5 broader philosophical topics based on information obtained from Wikipedia pages, supplemented by insights from ChatGPT, to group similar topics together.
 
@@ -99,6 +99,7 @@ High positive correlations are seen among several philosophical clusters, indica
 
 Having looked at data in a somewhat qualitative manner, we will now try to dive into some more rigorous and causal approach for digging further into this question with the next part of our data story where we will adopt a more statistical rigorous approach.
 
+<div id="part2"></div>
 # Part 2 : Variation of trends for philosophical pages in English
  
 The goal is to retrieve the trend and see if the timepoints linked to Covid-19 have a significant  impact on this trend. 
@@ -160,6 +161,7 @@ Now let’s look at these graphs precisely and more closely to the meaning of th
 
 
 
+<div id="part3"></div>
 # Part 3: Looking at how languages dynamics across philosophical articles behave during Covid 19 period.
 
 Now, we want to observe how the dynamics of the consultation of the philosophy related pages evolved before, during and after Covid across different languages. In other words, we analyze how the consumption of wikipedia philosophy related pages is different across languages. The first thing that we can take a look at is the total views of philosophy pages in each language in log scale to reduce discrepancies between languages. We just want to take a look at the trend.
