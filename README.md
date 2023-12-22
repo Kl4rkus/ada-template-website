@@ -43,21 +43,23 @@ One unique observation is for religion. It is the only topic not experiencing a 
 >
 </div>
 
-Now let’s investigate what’s happening during the different periods of covid, delimited by vertical dashed lines.
+Now let’s investigate what’s happening at crucial covid-19 dates (delimited by vertical dashed lines).
 
-## First COVID Case Date (red dashed vertical line):
+## First covid case date (red line):
 
  We could expect a rise in pageviews due to an initial period of uncertainity and information seeking. However, this chart doesn't show a clear spike in pageviews around this time, which could suggest that the initial spread of COVID-19 may not have immediately influenced interest in philosophical topics, due it it being slow, far away, or deemed unimportant, for example.
 
-## Lockdown Date (blue dashed vertical line): 
+## Lockdown Date (blue line): 
 
 The lockdown period is typically associated with people having more time at home, potentially leading to increased internet usage. In this case, we can see that some topics like Metaphysics and Political Thought show a marked increase in pageviews shortly after the lockdown begins. This may indicate that during periods of enforced isolation, either people had more time to engage with complex subjects, or sought philosophical perspectives to make sense of the societal changes occurring around them or both.
 
-## Back to Normalcy Date (green dashed vertical line): 
+## Back to Normalcy Date (green line): 
 
 As restrictions ease and a sense of normalcy returns, we could expect the interest in philosophical topics to decrease as people return to their regular activities. However, the chart shows that for some topics like Political Thought and classical philosophy, the interest remains steady, even rising after the return to normalcy, which might suggest that the pandemic had a lasting impact on people's engagement with these subjects.
 It's important to consider that these interpretations are speculative, and the actual reasons behind the changes in pageviews could have multiple sources.
-Looking at these correlation heatmaps throughout the time period considered may help us assess differences in behaviors between philosophy topics consultations.
+
+
+We will now try to look at the following correlation heatmaps that displays correlation between time series of page views for every topic on every period considered to hopefully understand better dynamics between topics.
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
