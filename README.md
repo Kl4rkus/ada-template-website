@@ -169,28 +169,24 @@ And finally, we performed a clustering analysis of our fraction of views to effe
 
     <table>
         <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-            <th>Column 4</th>
+            <th>Data processing</th>
+            <th>Before Covid</th>
+            <th>During Covid</th>
+            <th>After Covid</th>
         </tr>
         <tr>
-            <td>Row 1, Cell 1</td>
-            <td>Row 1, Cell 2</td>
+            <td>Raw fraction of views</td>
+            <td><ul><li> Fr, It, Sr</li>
+            <li> Ja, Ko </li> <li>De, Sv, Da, Fi, Nl, No</li>
+            </ul></td>
             <td>Row 1, Cell 3</td>
             <td>Row 1, Cell 4</td>
         </tr>
         <tr>
-            <td>Row 2, Cell 1</td>
+            <td>De-noisy fraction of views</td>
             <td>Row 2, Cell 2</td>
             <td>Row 2, Cell 3</td>
             <td>Row 2, Cell 4</td>
-        </tr>
-        <tr>
-            <td>Row 3, Cell 1</td>
-            <td>Row 3, Cell 2</td>
-            <td>Row 3, Cell 3</td>
-            <td>Row 3, Cell 4</td>
         </tr>
     </table>
 
