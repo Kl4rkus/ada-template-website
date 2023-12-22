@@ -1,12 +1,12 @@
 
 
-Motivation and goal:
+## Motivation and goal:
 
 Covid 19 being the first global modern day pandemic, it has influenced our society in many ways since it started 4 years ago. Causing many deaths and forcing our society to impose heavy restrictions, we wanted to observe if it had any effects on beliefs, such as philosophy and religion.
 
 We will observe any changes in beliefs mainly by looking at the changes in views for relevant subjects.  
 
-Research questions:
+## Research questions:
 
 1. Do Wikipedia's philosophy and religion page views provide insights into how individuals perceive life amid the unprecedented social conditions of COVID-19?
 
@@ -14,8 +14,8 @@ Research questions:
 
 3. Can we identify groups of cultures exhibiting similar philosophical and religious reactions to the changes induced by COVID-19?
 
-Dataset description:
-We will use 
+## Dataset description:
+We use an API to retrieve the views from the philosophy pages. The name of the philosophies are taken from the english page list of philosophy. Then we get the url for each english philosophy for all languages and construct our dataframes. We use the daily granularity to have enought data points for short period of time, in particular between the first case and the lockdown. When we have the dataframe for all languages, we keep only the philosophy pages that exist in all target languages to have a more uniform comparison. 
 
 
 
@@ -99,12 +99,12 @@ High positive correlations are seen among several philosophical clusters, indica
 
 Having looked at data in a somewhat qualitative manner, we will now try to dive into some more rigorous and causal approach for digging further into this question with the next part of our data story where we will adopt a more statistical rigorous approach.
 
-# PART 2
-
-Study of the trends in the pages in english. 
+# Part 2 : Variation of trends for philosophical pages in English
+ 
 The goal is to retrieve the trend and see if the timepoints linked to Covid-19 have a significant  impact on this trend. 
 
-The Data preprocessing : 
+#### The Data preprocessing : 
+
 The study now is made on the dataframe containing the pageviews for all philosophy in english. The granularity of the views are daily and it can be seen on this graph for example, that it makes a lot of noise, so the data is converted to have weekly points. As shown here, the noise is less visible. 
 
 <img alt="views per day" src="images/Views_per_day.png">
@@ -113,7 +113,8 @@ The study now is made on the dataframe containing the pageviews for all philosop
 
 Another preprocessing step is the selection of significant philosophies. Indeed, the disparity of number of logs per page is very large. Although it has already been filtered by using only pages that exist in all the target languages, this disparity might impact the relevance of the study. To prevent that, a threshold of 10% of the most viewed page is taken, and only pages above are kept for the rest of the analysis. This leaves us with 68 philosophies. 
 
-First observations on the trends : 
+#### First observations on the trends : 
+
 The study of this trend can not be done directly on this raw data of pageviews. Indeed, the potential change in interest for a certain philosophy is only interesting if it is caused by the particular situation of the pandemic, and not an unrelated variation of interest. To mitigate this issue, the seasonality of the interest is separated from the trend. Thus the usual variations that occur over the year for a certain page are not supposed to impact our analysis. 
 
 <img src="images/Seasonal_decomposition_socialism.png">
@@ -124,7 +125,8 @@ The study of this trend can not be done directly on this raw data of pageviews. 
 
 <img src="images/Seasonal_decomposition_libertarianism.png">
 
-Change in the trends : 
+#### Change in the trends : 
+
 Using the principle of interrupted time series, the trend was segmented into 3 time periods. Before Covid-19, during and after, these periods were separated by two timepoints : February 16th 2020 and June 21st 2021. These dates were chosen to match the average dates of the first case and end return to normalcy. This part of the study uses linear regression, so the dates inside the Covid period were not selected because it gave segments that were too short to properly study. On each segment, a linear regression was made. Here is an example with the Metaphysics page, that had a significant change at t0 but not t1. 
 
 <img src="images/Example_regression.png">
@@ -135,13 +137,17 @@ What can be observed is that even if the slope is not changed significantly, som
 
 These plots display the variations in the slope of the trend and in the intercept. In other words, it shows the difference between what was predicted from the previous tendency and what actually occurred. It allows us to have a better view over significant changes for the philosophies, and choose more accurately which groups to look at. 
 Now let’s look at these graphs precisely and more closely to the meaning of these philosophical currents. 
-Challenging the political system 
+
+* Challenging the political system 
+
 When the covid arrives, among the philosophies that have a strong increase in their interest are Socialism and Populism. This is interesting because they are both political philosophies that  are driven by social inequalities and that criticize the capitalist system. Close to these currents are Communism and Marxism, that have a strong increase in the predicted intercept. Also, we can see that although Fascism has a slight slow down in its trend, it remains a highly popular page and after the beginning of covid has an increase in the predicted intercept. Finally, pages Anarchy and Anarchism also have higher baselines after the beginning of Covid. After the Covid, the tendency is reversed for Socialism but the others keep their positive trends. This is interesting because during the Covid, inequalities were highlighted more than ever, especially during lockdowns. Depending on social class, differences in quality of life, education and financial security have been exacerbated more than ever. This could explain the renewed interest, particularly in populism, which had previously been on the wane.  What's more, the measures taken by governments have often been criticized and judged to be very harsh, which could also explain the stronger interest in philosophies linked to the power of the state and the questioning of its system. 
 Notice that we can observe a slight drop of views at the end of the graph but that is common in a lot of pages at this moment, probably due to the full return to normalcy leading to decreasing interest in wikipedia in general. 
-<img src="images/Poverty.png">
+<img src="images/Poverty.png" width="200" height="100">
 
 <img src="images/Political_philosophies.png">
-Religious questioning
+
+* Religious questioning
+
 For the Baptist (and Baptism) we can see a slight acceleration in the trend, then a slowdown again, but overall the change is not very marked. 
 For Agnosticism, we can see that interest increases before Covid, stagnates, decreases slightly during and drops drastically afterwards. What's interesting here is that the variations are very marked between the first and last periods. This philosophy is rooted in not knowing. It's interesting that after this period of confinement, which was very conducive to reflection, views dropped like that. On the contrary, the beginning of the trend for Atheism, is comparable to the one for agnosticism, with a more steep decline during Covid, but the after Covid has a very clear increase in interest. 
 
