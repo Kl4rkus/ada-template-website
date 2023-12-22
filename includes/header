@@ -12,13 +12,6 @@
 	<!-- Menu -->
 	<nav id="menu">
 		<ul class="links">
-		<!--
-			{% for page in site.pages %}
-			{% if page.layout == "home" %}
-				<li><a href="{{ "" | absolute_url }}/">{{ page.title }}</a></li>
-			{% endif %}
-		{% endfor %}
-		-->
 		<a href="#part1" class="scroll-link">Part 1</a>
 	
 		<a href="#part2" class="scroll-link">Part 2</a>

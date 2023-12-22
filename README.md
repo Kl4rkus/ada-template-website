@@ -122,7 +122,7 @@ The study of this trend can not be done directly on this raw data of pageviews. 
 
 <img src="images/Seasonal_decomposition_fascism.png">
 
-<img src="images/Seasonal_decomposition_positivism.png">
+<img src="images/Seasonal_decomposition_posivitism.png">
 
 <img src="images/Seasonal_decomposition_libertarianism.png">
 
