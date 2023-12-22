@@ -107,34 +107,40 @@ The goal is to retrieve the trend and see if the timepoints linked to Covid-19 h
 The Data preprocessing : 
 The study now is made on the dataframe containing the pageviews for all philosophy in english. The granularity of the views are daily and it can be seen on this graph for example, that it makes a lot of noise, so the data is converted to have weekly points. As shown here, the noise is less visible. 
 
-## GRAPH RAW DAILY  VIEWS ##
+<img alt="views per day" src="images/Views_per_day.png">
 
-## GRAPH WEEKLY VIEWS  ##
+<img alt="views per week" src="images/Views_per_week.png">
 
 Another preprocessing step is the selection of significant philosophies. Indeed, the disparity of number of logs per page is very large. Although it has already been filtered by using only pages that exist in all the target languages, this disparity might impact the relevance of the study. To prevent that, a threshold of 10% of the most viewed page is taken, and only pages above are kept for the rest of the analysis. This leaves us with 68 philosophies. 
 
 First observations on the trends : 
 The study of this trend can not be done directly on this raw data of pageviews. Indeed, the potential change in interest for a certain philosophy is only interesting if it is caused by the particular situation of the pandemic, and not an unrelated variation of interest. To mitigate this issue, the seasonality of the interest is separated from the trend. Thus the usual variations that occur over the year for a certain page are not supposed to impact our analysis. 
-## GRAPH SEASONAL DECOMPO ## 
+
+<img src="images/Seasonal_decomposition_socialism.png">
+
+<img src="images/Seasonal_decomposition_fascism.png">
+
+<img src="images/Seasonal_decomposition_positivism.png">
+
+<img src="images/Seasonal_decomposition_libertarianism.png">
 
 Change in the trends : 
 Using the principle of interrupted time series, the trend was segmented into 3 time periods. Before Covid-19, during and after, these periods were separated by two timepoints : February 16th 2020 and June 21st 2021. These dates were chosen to match the average dates of the first case and end return to normalcy. This part of the study uses linear regression, so the dates inside the Covid period were not selected because it gave segments that were too short to properly study. On each segment, a linear regression was made. Here is an example with the Metaphysics page, that had a significant change at t0 but not t1. 
 
- ## GRAPH Example regression Metaphysics and Marxism ##
+<img src="images/Example_regression.png">
 
 What can be observed is that even if the slope is not changed significantly, sometimes there is a big difference in the baseline, i.e. in the intercept and that is why we also study it. This phenomenon can be seen in the example with Marxism, at t0. 
 
- ## GRAPH VARIATIONS (avec les 8)  ##
+<img src="images/variations.png">
 
 These plots display the variations in the slope of the trend and in the intercept. In other words, it shows the difference between what was predicted from the previous tendency and what actually occurred. It allows us to have a better view over significant changes for the philosophies, and choose more accurately which groups to look at. 
 Now let’s look at these graphs precisely and more closely to the meaning of these philosophical currents. 
 Challenging the political system 
 When the covid arrives, among the philosophies that have a strong increase in their interest are Socialism and Populism. This is interesting because they are both political philosophies that  are driven by social inequalities and that criticize the capitalist system. Close to these currents are Communism and Marxism, that have a strong increase in the predicted intercept. Also, we can see that although Fascism has a slight slow down in its trend, it remains a highly popular page and after the beginning of covid has an increase in the predicted intercept. Finally, pages Anarchy and Anarchism also have higher baselines after the beginning of Covid. After the Covid, the tendency is reversed for Socialism but the others keep their positive trends. This is interesting because during the Covid, inequalities were highlighted more than ever, especially during lockdowns. Depending on social class, differences in quality of life, education and financial security have been exacerbated more than ever. This could explain the renewed interest, particularly in populism, which had previously been on the wane.  What's more, the measures taken by governments have often been criticized and judged to be very harsh, which could also explain the stronger interest in philosophies linked to the power of the state and the questioning of its system. 
-Notice that we can observe a slight drop of views at the end of the graph but that is common in a lot of pages at this moment, probably due to the full return in normalcy and an interest in wikipedia in general less present. 
+Notice that we can observe a slight drop of views at the end of the graph but that is common in a lot of pages at this moment, probably due to the full return to normalcy leading to decreasing interest in wikipedia in general. 
 <img src="images/Poverty.png">
 
- ## GRAPH Political  ##
-
+<img src="images/Political_philosophies.png">
 Religious questioning
 For the Baptist (and Baptism) we can see a slight acceleration in the trend, then a slowdown again, but overall the change is not very marked. 
 For Agnosticism, we can see that interest increases before Covid, stagnates, decreases slightly during and drops drastically afterwards. What's interesting here is that the variations are very marked between the first and last periods. This philosophy is rooted in not knowing. It's interesting that after this period of confinement, which was very conducive to reflection, views dropped like that. On the contrary, the beginning of the trend for Atheism, is comparable to the one for agnosticism, with a more steep decline during Covid, but the after Covid has a very clear increase in interest. 
@@ -143,8 +149,7 @@ For currents like Paganism or Pantheism, that take root mostly in the connection
 
 Finally New Age and  Mysticism are both trending before and after Covid, but not during. These currents are more spiritual than religious and revolve around personal growth for one, and experiencing communion with a divine reality for the other. The lack of connection with the world, the narrowness of our lifestyle during this period might have made it hard to pursue these beliefs.  
 
- ## GRAPH Religious  ## 
-
+<img src="images/Religious_philosophies.png">
 
 
 
