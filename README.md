@@ -96,3 +96,5 @@ High positive correlations are seen among several philosophical clusters, indica
 <li>In essence, lasting changes would be evident if the post-pandemic correlations do not revert to the levels seen in the "Before Covid” heatmap. This would indicate that the pandemic has had an enduring effect on the way people engage with and relate different philosophical topics. A return to the "Before Covid" correlation levels would suggest that the pandemic's impact was temporary and that philosophical interests have normalized as the immediate crisis has receded.</li>
 </ul>
 
+
+Having looked at data in a somewhat qualitative manner, we will now try to dive into some more rigorous and causal approach for digging further into this question with the next part of our data story where we will adopt a more statistical rigorous approach.
