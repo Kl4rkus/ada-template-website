@@ -209,6 +209,8 @@ In order to visualize this more clearly, we reduce our data’s dimension so tha
 
 
 <img src="/images/T-SNE_Scatter_Plot_with_Country_Codes.png">
+![](path/to/your/image.jpg)
+<img src="images/T-SNE_Scatter_Plot_with_Country_Codes.png">
 
 
 
