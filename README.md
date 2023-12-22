@@ -134,7 +134,7 @@ Using the principle of interrupted time series, the trend was segmented into 3 t
 
 What can be observed is that even if the slope is not changed significantly, sometimes there is a big difference in the baseline, i.e. in the intercept and that is why we also study it. This phenomenon can be seen in the example with Marxism, at t0. 
 
-<img src="images/variations.png">
+<img src="images/Variations.png">
 
 These plots display the variations in the slope of the trend and in the intercept. In other words, it shows the difference between what was predicted from the previous tendency and what actually occurred. It allows us to have a better view over significant changes for the philosophies, and choose more accurately which groups to look at. 
 Now let’s look at these graphs precisely and more closely to the meaning of these philosophical currents. 
